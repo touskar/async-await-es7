@@ -5,7 +5,7 @@
 ## Install
 
 ```
-$ npm install async-await-es7
+$ npm install async--await
 ```
 
 
@@ -43,7 +43,7 @@ getUser()
 /**
  * module
  */
-let async = require('async-await-es7');
+let async = require('async--await');
 
 let startTime = performance.now();
 
