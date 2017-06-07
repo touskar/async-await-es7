@@ -47,7 +47,7 @@ let async = require('async-await-es7');
 
 let startTime = performance.now();
 
-let getTrace = async(function () {
+let getUser = async(function () {
     let pageContent;
     try {
         pageContent = await(fetch('http://jsonplaceholder.typicode.com/posts/1'));
@@ -58,10 +58,10 @@ let getTrace = async(function () {
     return  pageContent.json()
 });
 
-getTrace()
+getUser()
     .then(x => {
         let endDate = performance.now();
-        console.log(`getTrace call from async take ${endDate - startTime} ms`);
+        console.log(`getUser call from async take ${endDate - startTime} ms`);
 
         console.log(x);
 
