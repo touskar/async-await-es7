@@ -68,6 +68,35 @@ getTrace()
     })
 ```
 
+
+```js
+
+    async function logFetch(url) {
+        try {
+            const response = await fetch(url);
+            console.log(await response.text(), 'from 1');
+        }
+        catch (err) {
+            console.log('fetch failed', err);
+        }
+    }
+    
+    let logFetch2 = async(function (url) {
+            try {
+                const response = await(fetch(url));
+                console.log(await(response.text()), 'from 2');
+            }
+            catch (err) {
+                console.log('fetch failed', err);
+            }
+        });
+
+
+    logFetch('http://jsonplaceholder.typicode.com/posts/1');
+    logFetch2('http://jsonplaceholder.typicode.com/posts/1');
+
+```
+
 ## Api
 ###-async(fn*|fn) -> fn
 

@@ -5,7 +5,7 @@
 
 (function () {
     function async(fn) {
-        return  () =>  {
+        return  function ()   {
             return new Promise((resolve, reject) => {
                 let GeneratorFunction = Object.getPrototypeOf(function*() {}).constructor;//Generator constructor
 
@@ -19,7 +19,7 @@
                 });
                 let generator = eval(`(${generatorSource});`); // create function and return it with ()
 
-                let iterator = generator();
+                let iterator = generator.apply(undefined, Array.from(arguments));
 
                 let  iterate = iteration =>  {
                     if (iteration.done) {
