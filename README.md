@@ -1,6 +1,6 @@
 # async-await
 
-> es7 async-await polyfill
+> es7 async-await polyfill for es6 (browsers and nodejs)
 
 ## Install
 

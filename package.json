@@ -1,7 +1,7 @@
 {
   "name": "async-await-es7",
   "version": "1.0.0",
-  "description": "es7 async-await polyfill",
+  "description": "es7 async-await polyfill for es6 (browsers and nodejs)",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
