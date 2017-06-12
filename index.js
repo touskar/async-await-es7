@@ -24,6 +24,7 @@
                 let  iterate = iteration =>  {
                     if (iteration.done) {
                         resolve(iteration.value);
+                        return;
                     }
 
 
