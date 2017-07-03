@@ -22,7 +22,7 @@ async function getUser () {
     try {
         pageContent = await fetch('http://jsonplaceholder.typicode.com/posts/1')
     } catch (ex) {
-        Promise.reject(ex)
+        throw new Error(ex);
     }
 
     return  pageContent.json()
@@ -52,7 +52,7 @@ let getUser = async(function () {
     try {
         pageContent = await(fetch('http://jsonplaceholder.typicode.com/posts/1'));
     } catch (ex) {
-        Promise.reject(ex)
+        throw new Error(ex);
     }
 
     return  pageContent.json()
